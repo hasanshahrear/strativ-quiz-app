@@ -54,7 +54,7 @@ export default function AdminQuestions() {
     }
     setQuestions(storedQuestions);
     setAnswers(storedAnswers);
-  }, []);
+  }, [setQuestions]);
 
   const saveToLocalStorage = (updatedQuestions: TQuestion[]) => {
     setQuestions(updatedQuestions);
