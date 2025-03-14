@@ -51,10 +51,11 @@ export default function AdminQuestions() {
     if (storedQuestions.length === 0) {
       localStorage.setItem("questions", JSON.stringify(mockQuestions));
       setQuestions(mockQuestions);
+      window.location.reload();
     }
     setQuestions(storedQuestions);
     setAnswers(storedAnswers);
-  }, [setQuestions]);
+  }, []);
 
   const saveToLocalStorage = (updatedQuestions: TQuestion[]) => {
     setQuestions(updatedQuestions);
